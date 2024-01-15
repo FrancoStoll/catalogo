@@ -1,14 +1,18 @@
+
 import HeroSection from "./components/HeroSection"
-import Navbar from "./components/Navbar"
+
+import Products from "./components/Products"
+import ContactoPage from "./pages/ContactoPage"
 
 function App() {
 
 
   return (
     <>
-      <Navbar />
-      <HeroSection />
 
+      <HeroSection />
+      <Products />
+      <ContactoPage />
     </>
   )
 }
