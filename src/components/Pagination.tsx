@@ -19,6 +19,9 @@ const Pagination = ({ productsPerPage, currentPage, setCurrentPage, totalProduct
     }
 
 
+
+
+
     const onPreviousPage = () => {
         setCurrentPage(currentPage - 1)
     }
@@ -30,6 +33,8 @@ const Pagination = ({ productsPerPage, currentPage, setCurrentPage, totalProduct
     const onSpecificPage = (numero: number) => {
         setCurrentPage(numero)
     }
+
+
     return (
         <nav className="pagination is-centered py-10 container mx-auto" role="navigation" aria-label="pagination">
             <button className={`pagination-previous ${currentPage === 1 ? 'is-disabled' : ''}`} onClick={onPreviousPage}>Anterior</button>

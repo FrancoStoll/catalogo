@@ -12,7 +12,7 @@ const ContactoPage = () => {
         <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-14">
 
           <div className="md:w-1/2">
-            <img className="shadow-2xl rounded-lg filter " src="./women2.jpg" alt="women" />
+            <img className="shadow-2xl rounded-lg filter " src="./women2.webp" alt="women" />
           </div>
 
           <div className="md:w-1/2 w-full flex justify-center flex-col items-center">

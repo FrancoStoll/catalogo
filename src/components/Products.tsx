@@ -20,6 +20,7 @@ const Products = () => {
     const firstIndex = lastIndex - productsPerPage // 0
 
     useEffect(() => {
+        
         const fetchProducts = async () => {
             // fetch in public data json
             const response = await fetch('./data.json')
@@ -28,7 +29,7 @@ const Products = () => {
             setProducts(data.productos);
         }
         fetchProducts();
-
+        setCurrentPage(1)
     }, [categoria, precioMax])
 
 

@@ -1,3 +1,5 @@
+
+
 const HeroSection = () => {
     return (
         <section className="container mx-auto">
@@ -19,7 +21,7 @@ const HeroSection = () => {
                 </div>
 
                 <div className="md:w-1/2 flex justify-center items-center md:justify-end">
-                    <img src="./heroimage.jpg" alt="heroimg" className="w-full h-full object-cover filter brightness-75  py-10" />
+                    <img src="./heroimage.webp" alt="heroimg" className="w-full h-full object-cover filter brightness-75  py-10" />
 
                 </div>
             </div>

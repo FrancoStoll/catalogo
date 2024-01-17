@@ -12,34 +12,16 @@ const PreViewProducts = ({ products }: { products: Product[] }) => {
                 <p className="text-lg font-semibold">¡Oferta Especial!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate fugiat aperiam dolorem iure.</p>
             </div>
-            <div className="bg-gray-100">
-                <div className="container mx-auto">
-                    <div className="flex flex-col md:flex-row gap-4 p-4 justify-start md:justify-center items-center text-lg">
-                        <p className="font-bold">Filtro:</p>
-
-                        <div className="flex gap-3 items-center">
-                            <label htmlFor="categoria" className="text-gray-700">Categoría:</label>
-                            <select className="p-3 border rounded-lg" name="categoria" id="categoria">
-                                <option value="" disabled selected>Seleccione una categoría</option>
-                                {/* Agregar opciones de categoría aquí */}
-                            </select>
-                        </div>
-
-                        <div className="flex gap-3 items-center">
-                            <label htmlFor="precio" className="text-gray-700">Precio máximo:</label>
-                            <input className="p-3 border rounded-lg" type="text" id="precio" name="precio" placeholder="Ingrese precio máximo" />
-                        </div>
-
-                        <button className="bg-blue-900 py-2 px-3 rounded-lg shadow text-white">Filtrar</button>
 
 
-                    </div>
-                </div>
+
+            <div>
+                <p className="text-center text-6xl mt-10 text-blue-900">Productos</p>
             </div>
 
-            <Link to='/productos' className="flex justify-end items-end container mx-auto px-10">
-                <p className="p-4 bg-blue-800 text-white border mt-10 rounded-lg shadow-lg">Ver mas {">>"}</p>
-            </Link>
+            <div className="flex justify-end items-end container mx-auto px-10">
+                <Link to='/productos' className="p-4 bg-blue-800 text-white hover:text-teal-500 border  rounded-lg shadow-lg">Ver mas {">>"}</Link>
+            </div>
 
 
             <div className="container place-items-center mx-auto py-5 grid gap-y-4  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
