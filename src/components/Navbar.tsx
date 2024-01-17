@@ -1,10 +1,15 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
+
+interface Page {
+    path: string;
+    name: string;
+}
 
 const Navbar = () => {
 
-
+    const location = useLocation()
     const [isMenuOpen, SetIsMenuOpen] = useState(false)
 
 
@@ -12,6 +17,15 @@ const Navbar = () => {
 
         SetIsMenuOpen(!isMenuOpen)
     }
+
+
+    const pages: Page[] = [
+        { path: '/', name: "Inicio" },
+        { path: '/productos', name: "Productos" },
+        { path: '/contacto', name: "Contacto" },
+        { path: '/about', name: "Sobre Nosotros" },
+    ]
+
 
 
     return (
@@ -26,10 +40,15 @@ const Navbar = () => {
 
                 <nav className="flex items-center">
                     <ul className="hidden md:flex md:gap-3  text-gray-700">
-                        <Link to='/' className="cursor-pointer">Inicio</Link>
-                        <Link to='/productos' className="cursor-pointer">Productos</Link>
-                        <Link to='/contacto' className="cursor-pointer">Contacto</Link>
-                        <Link to='/about' className="cursor-pointer">Sobre Nosotros</Link>
+                        {pages.map((page) => {
+                            return (
+                                <Link to={page.path} key={page.path}>
+                                    <li className={`${location.pathname == page.path ? 'border-b-4 border-black rounded' : ''} cursor-pointer  px-4 py-2 text-gray-700 hover:bg-gray-100 rounded`} >
+                                        {page.name}
+                                    </li>
+                                </Link>
+                            )
+                        })}
                     </ul>
                 </nav>
                 <div className="flex items-center gap-6">
@@ -43,31 +62,32 @@ const Navbar = () => {
 
 
                     <div className="md:hidden px-3">
-                        <svg onClick={toggleMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <svg onClick={toggleMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 cursor-pointer">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                         </svg>
 
 
-                        {/* Menú deslizante */}
+                        
                         <div className={`fixed top-0 right-0 h-[600px] bg-white transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden w-64 p-4`}>
                             <div className="flex justify-end">
-                                <svg onClick={toggleMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <svg onClick={toggleMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 cursor-pointer">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                                 </svg>
 
                             </div>
 
-                            <Link to='/' className="block py-2">Inicio</Link>
-                            <Link to='/productos' className="block py-2">Productos</Link>
-                            <Link to='/contacto' className="block py-2">Contacto</Link>
-                            <Link to='/about' className="block py-2">Sobre Nosotros</Link>
+                            {pages.map(page => (
+                                <Link onClick={toggleMenu} to={page.path} key={page.path} className={`${location.pathname == page.path ? 'border-b-4 border-black rounded' : ''} block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer`}>
+                                    {page.name}
+                                </Link>
+                            ))}
                         </div>
                     </div>
 
                 </div>
 
             </div>
-        </header>
+        </header >
     )
 }
 

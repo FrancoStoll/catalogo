@@ -18,8 +18,8 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                <div className="md:w-2/2 flex justify-center items-center md:justify-end">
-                    <img src="./heroimage.jpg" alt="heroimg" className="w-full h-full object-cover filter brightness-75 rounded-lg py-10  md:py-24 " />
+                <div className="md:w-1/2 flex justify-center items-center md:justify-end">
+                    <img src="./heroimage.jpg" alt="heroimg" className="w-full h-full object-cover filter brightness-75  py-10" />
 
                 </div>
             </div>
