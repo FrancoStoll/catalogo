@@ -14,16 +14,16 @@ const Card = ({ prod }: { prod: Product }) => {
 
         <div className="w-full flex justify-between items-center">
           <p className="font-bold text-xl">${prod.precio_total}</p>
-          {prod.en_oferta ? <p className="bg-green-500 p-2 rounded font-bold text-green-900">Oferta</p> : ''}
+          {prod.en_oferta ? <p className="bg-green-300 py-2 px-4 rounded font-bold text-green-700">Oferta</p> : ''}
 
         </div>
 
       </div>
 
       <div className="flex justify-center">
-        <button className="w-9/10 px-4 py-3 bg-black text-white rounded-lg  uppercase font-bold">
+        <button className="w-9/10 px-4 py-3 bg-blue-900 text-white rounded-lg  uppercase font-bold">
 
-          Agregar al carrito
+         Mas Información
         </button>
       </div>
 

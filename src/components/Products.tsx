@@ -16,13 +16,16 @@ const Products = () => {
     const [productsPerPage] = useState(8)
     const [currentPage, setCurrentPage] = useState(1)
 
-    const lastIndex = currentPage * productsPerPage // 6
-    const firstIndex = lastIndex - productsPerPage // 0
+
+    // Para el Slice .slice(firstIndex, lastIndex)
+    const lastIndex = currentPage * productsPerPage // 1 * 6 || 2 * 6 = 12 
+    const firstIndex = lastIndex - productsPerPage // 6 - 6 || 12 - 6 = 6
 
     useEffect(() => {
-        
+
         const fetchProducts = async () => {
-            // fetch in public data json
+            
+
             const response = await fetch('./data.json')
 
             const data = await response.json();

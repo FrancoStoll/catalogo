@@ -16,7 +16,7 @@ const PreViewProducts = ({ products }: { products: Product[] }) => {
 
 
             <div>
-                <p className="text-center text-6xl mt-10 text-blue-900">Productos</p>
+                <p className="text-center text-6xl mt-10 text-blue-900 font-bold uppercase">Productos</p>
             </div>
 
             <div className="flex justify-end items-end container mx-auto px-10">
