@@ -1,13 +1,13 @@
 import { Product } from '../../App';
 
 
-const Card = ({ prod }: { prod: Product }) => {
+const Card = ({ prod, handleModalProduct }: { prod: Product, handleModalProduct: (prod: Product) => void, }) => {
 
 
   return (
     <div className="w-[300px] shadow-xl pb-5">
       <img className="h-[300px] w-[300px]" src={`./${prod.imagen}`} alt={prod.descripcion} />
-   
+
       <div className="flex flex-col items-start p-5 gap-2">
         <p className="text-xl">{prod.nombre}</p>
         <p className="text-gray-500 overflow-hidden whitespace-nowrap overflow-ellipsis w-full">{prod.descripcion}</p>
@@ -21,9 +21,9 @@ const Card = ({ prod }: { prod: Product }) => {
       </div>
 
       <div className="flex justify-center">
-        <button className="w-9/10 px-4 py-3 bg-blue-900 text-white rounded-lg  uppercase font-bold">
+        <button className="w-9/10 px-4 py-3 bg-blue-900 text-white rounded-lg  uppercase font-bold" onClick={() => handleModalProduct(prod)}>
 
-         Mas Información
+          Mas Información
         </button>
       </div>
 

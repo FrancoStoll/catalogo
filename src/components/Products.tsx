@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import { Product } from "../App"
+import { Product } from '../App';
 import Card from "./Card/Card"
 import Pagination from "./Pagination"
 
-const Products = () => {
+const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product) => void }) => {
 
 
     // Productos y Filtros de productos
@@ -24,7 +24,7 @@ const Products = () => {
     useEffect(() => {
 
         const fetchProducts = async () => {
-            
+
 
             const response = await fetch('./data.json')
 
@@ -43,7 +43,9 @@ const Products = () => {
     const filterProducts = () => {
         // Filtrar por categoría
         let filteredProducts = products;
-        if (categoria !== 'all') {
+
+
+        if (categoria !== 'all' && categoria !== '') {
             filteredProducts = products.filter(prod => prod.categoria === categoria);
         }
 
@@ -99,7 +101,7 @@ const Products = () => {
             <div className="container place-items-center mx-auto py-5 grid gap-y-4  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
                 {products.map((prod: Product) => (
-                    <Card key={prod.id} prod={prod} />
+                    <Card key={prod.id} prod={prod} handleModalProduct={handleModalProduct} />
                 )).slice(firstIndex, lastIndex)}
             </div>
 
