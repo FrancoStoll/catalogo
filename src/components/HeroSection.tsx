@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 const HeroSection = () => {
@@ -11,12 +12,12 @@ const HeroSection = () => {
                     <p className="text-gray-500 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates suscipit ab inventore cum maxime consequatur, optio sint cumque dignissimos, ratione unde eos.</p>
 
                     <div className="flex gap-3 justify-center w-full md:justify-start">
-                        <button className="font-bold uppercase px-4 py-3 bg-black text-white rounded shadow hover:bg-blue-900 focus:outline-none focus:shadow-outline transition-all transition-duration:150ms">
+                        <Link to="/productos" className="font-bold uppercase px-4 py-3 bg-black text-white rounded shadow hover:bg-blue-900 focus:outline-none focus:shadow-outline transition-all transition-duration:150ms">
                             Ver Productos
-                        </button>
-                        <button className="font-bold uppercase px-4 py-3 shadow-xl text-black rounded  hover:bg-blue-900 focus:outline-none focus:shadow-outline transition-all transition-duration:150ms hover:text-white">
+                        </Link>
+                        <Link to="/contacto" className="font-bold uppercase px-4 py-3 shadow-xl text-black rounded  hover:bg-blue-900 focus:outline-none focus:shadow-outline transition-all transition-duration:150ms hover:text-white">
                             Contactanos
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
