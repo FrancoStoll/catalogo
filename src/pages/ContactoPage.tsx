@@ -2,9 +2,9 @@
 const ContactoPage = () => {
   return (
     <>
-      <div className="text-center mt-8  p-6 font-bold bg-blue-900 text-white">
-        <p className="text-2xl">Contactanos</p>
-        <p>Obtene mas información acerca de nuestros productos</p>
+      <div className="text-center   p-6 font-bold bg-blue-900 text-white">
+        <p className="text-5xl font-bold">Contactanos</p>
+        <p className="text-sm mt-1">Obtene mas información acerca de nuestros productos</p>
       </div>
 
       <section className="p-10">

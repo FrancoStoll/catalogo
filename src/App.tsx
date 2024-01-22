@@ -1,5 +1,3 @@
-
-import { useEffect, useState } from "react"
 import HeroSection from "./components/HeroSection"
 import ContactoPage from "./pages/ContactoPage"
 
@@ -26,7 +24,7 @@ function App() {
     <>
 
       <HeroSection />
-      <ProductosPage  />
+      <ProductosPage />
       <ContactoPage />
     </>
   )

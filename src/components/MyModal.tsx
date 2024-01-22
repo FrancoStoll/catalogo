@@ -1,23 +1,27 @@
 
 import { useState } from 'react';
 import { Product } from '../App';
+import useCart from '../hooks/useCart';
 
 
 const SIZES_CONST = ['s', 'm', 'l', 'xl', '2xl']
 
-function MyModal({ closeModal, productModal }: { closeModal: () => void, productModal: Product | undefined }) {
+function MyModal({ closeModal, productModal }: { closeModal: () => void, productModal?: Product }) {
 
 
 
     const [amount, setAmount] = useState<number>(1)
     const [sizes, setSizes] = useState<string>('')
+    const { handleProductModal } = useCart();
+
+    const [alert, setAlert] = useState(false);
 
     if (productModal == undefined) return 'Loading....'
 
     return (
 
 
-        <div className='flex p-2 gap-5 w-[700px] relative'>
+        <div className='flex p-2 gap-5 md:w-[700px] w-[300px] flex-col md:flex-row items-center relative'>
             {productModal !== undefined ? (
                 <>
                     <div onClick={closeModal} className='absolute cursor-pointer -right-3 -top-3'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
@@ -34,6 +38,8 @@ function MyModal({ closeModal, productModal }: { closeModal: () => void, product
                         <h1 className='text-center text-4xl font-bold text-blue-900'>{productModal.nombre}</h1>
                         <p className='text-sm text-gray-500 py-4'>{productModal.descripcion}</p>
 
+
+                        {alert && <p className='bg-red-300 text-red-950 py-2 px-3'>Agrege un talle primero</p>}
                         <p>Talles:</p>
                         <div className='flex gap-3 mt-1'>
 
@@ -63,7 +69,18 @@ function MyModal({ closeModal, productModal }: { closeModal: () => void, product
                         </div>
 
 
-                        <button className="font-bold uppercase mt-4 w-full px-4 py-3 bg-black text-white rounded shadow hover:bg-blue-900 focus:outline-none focus:shadow-outline transition-all transition-duration:150ms">
+                        <button
+                            onClick={() => {
+                                if (sizes !== '') {
+                                    handleProductModal({ ...productModal, amount, size: sizes })
+                                    closeModal()
+                                    return
+                                }
+                                setAlert(true)
+                            }
+
+                            }
+                            className="font-bold uppercase mt-4 w-full px-4 py-3 bg-black text-white rounded shadow hover:bg-blue-900 focus:outline-none focus:shadow-outline transition-all transition-duration:150ms">
                             Agregar al carrito
                         </button>
 

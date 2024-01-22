@@ -2,7 +2,7 @@
 const WhatsAppButton = () => {
     return (
         <a
-            href="https://wa.me/123456789"
+            href="https://api.whatsapp.com/send?phone=123456789&text=Hola"
             target="_blank"
             rel="noopener noreferrer"
             className="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-md cursor-pointer"

@@ -20,7 +20,7 @@ const customStyles = {
 const ProductosPage = () => {
 
 
-  const [productModal, setProductModal] = useState<Product | undefined>()
+  const [productModal, setProductModal] = useState<Product>()
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
 
@@ -37,12 +37,13 @@ const ProductosPage = () => {
     setProductModal(producto)
   }
 
+  Modal.setAppElement('#root')
   return (
     <>
       <Products handleModalProduct={handleModalProduct} />
 
       <Modal isOpen={isModalOpen} style={customStyles} onRequestClose={closeModal}>
-        <MyModal closeModal={closeModal}  productModal={productModal}/>
+        <MyModal closeModal={closeModal}  productModal={productModal} />
       </Modal>
     </>
   )
