@@ -16,7 +16,7 @@ function MyModal({ closeModal, productModal }: { closeModal: () => void, product
 
     const [alert, setAlert] = useState(false);
 
-    if (productModal == undefined) return 'Loading....'
+  
 
     return (
 

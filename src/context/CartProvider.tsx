@@ -7,7 +7,7 @@ interface CartContextInterface {
     handleProductModal: (productoModal: ProductosCart) => void
 }
 
-interface ProductosCart {
+export interface ProductosCart {
     id?: number;
     categoria?: string;
     nombre?: string;
@@ -32,8 +32,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
 
 
     const handleProductModal = (data: ProductosCart) => {
-
-
         const existProduct = cart.find(c => c.id === data.id && c.size === data.size)
 
         if (existProduct) {
@@ -44,13 +42,10 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
             ))
             return
         }
-
-
         setCart(prev => ([
             ...prev,
             data
         ]))
-
     }
 
 
