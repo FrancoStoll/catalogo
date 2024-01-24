@@ -11,14 +11,14 @@ const CarritoPage = () => {
 
     <>
       {cart.length > 0 ? (
-        <div className="mb-5">
+        <div className="mb-5 h-screen">
           <h1 className="bg-blue-900 text-center text-white py-4 mb-5 text-5xl font-bold">Tú Carrito</h1>
 
 
-          <div className="flex flex-col md:flex-row container mx-auto border py-4 px-6 rounded-md">
+          <div className="md:flex flex-col lg:flex-row md:gap-10 container mx-auto border py-4 px-6 rounded-md">
 
             {/* parte de los productos */}
-            <div className="w-9/10 md:w-2/3">
+            <div className="w-9/10 xl:w-2/3">
 
               {cart?.map((item) => (
 
@@ -31,7 +31,7 @@ const CarritoPage = () => {
 
             {/* parte del resumen */}
 
-            <div className="w-9/10 md:w-1/3">
+            <div className="w-9/10 xl:w-1/3">
 
 
               <CartResumen cart={cart}/>

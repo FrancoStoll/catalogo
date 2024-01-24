@@ -5,21 +5,21 @@ const CartCard = ({ item }: { item: ProductosCart }) => {
 
     return (
 
-        <div className="flex flex-col md:flex-row gap-8 border-b last:border-none py-5">
+        <div className="flex flex-col md:flex-row md:gap-10 gap-2 border-b last:border-none py-5">
 
             <div className="p-2">
                 <p className="font-bold">Producto</p>
 
-                <div className="flex flex-col md:flex-row gap-3 justify-center items-center h-full">
+                <div className="flex flex-col md:flex-row gap-4 justify-center items-center h-full">
                     <img src={`./${item?.imagen}`} alt={item?.nombre} width={150} height={150} className="rounded-md" />
                     <div className="flex flex-col justify-center items-start">
                         <p className="text-2xl text-blue-900 uppercase overflow-hidden whitespace-nowrap overflow-ellipsis" style={{ maxWidth: "15ch" }}>{item?.nombre}</p>
                         <p className="text-sm text-slate-600 overflow-hidden whitespace-nowrap overflow-ellipsis" style={{ maxWidth: "20ch" }}>{item.descripcion}</p>
-                        <p className="">Talle:{item?.size}</p>
+                        <p className="">Talle:{" "} <span className="uppercase">{item?.size}</span></p>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center gap-2">
                 <p className=" font-bold">Cantidad</p>
 
                 <div className='flex justify-center items-center h-full gap-1'>
@@ -32,17 +32,17 @@ const CartCard = ({ item }: { item: ProductosCart }) => {
                     </svg>
                 </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center  mt-10 xl:mt-0">
                 <p className="font-bold text-center">Precio</p>
 
-                <div className="flex justify-center items-center h-full">
+                <div className="flex items-center h-full">
                     <p className="text-xl font-bold text-blue-900">${item?.precio_total}</p>
                 </div>
             </div>
 
 
             <div className="flex justify-center items-center mt-4">
-                <button className="bg-red-600 py-2 px-3 rounded-lg shadow text-white">Eliminar</button>
+                <button className="bg-red-600 py-2 px-3 rounded-lg shadow text-white ">Eliminar</button>
             </div>
 
         </div>

@@ -7,7 +7,7 @@ import { Layout } from './Layout.tsx'
 import ProductosPage from './pages/ProductosPage.tsx'
 import ContactoPage from './pages/ContactoPage.tsx'
 import AboutPage from './pages/AboutPage.tsx'
-import CarritoPage from './pages/CarritoPage.tsx'
+import CarritoPage from './pages/CarritoPage.tsx'  
 import { CartProvider } from './context/CartProvider.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
