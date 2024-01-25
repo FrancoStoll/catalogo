@@ -11,7 +11,7 @@ const CarritoPage = () => {
 
     <>
       {cart.length > 0 ? (
-        <div className="mb-5 h-screen">
+        <div className="mb-5">
           <h1 className="bg-blue-900 text-center text-white py-4 mb-5 text-5xl font-bold">Tú Carrito</h1>
 
 
