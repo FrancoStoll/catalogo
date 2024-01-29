@@ -45,7 +45,7 @@
       "en_oferta": true,
       "precio_oferta": 1.8,
       "precio_total": 12.0,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 6,
       "categoria": "medias",
@@ -54,7 +54,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 8.99,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 7,
       "categoria": "remera",
@@ -119,7 +119,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 15.99,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 14,
       "categoria": "medias",
@@ -128,7 +128,7 @@
       "en_oferta": true,
       "precio_oferta": 1.5,
       "precio_total": 10.0,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 15,
       "categoria": "medias",
@@ -137,7 +137,7 @@
       "en_oferta": true,
       "precio_oferta": 3.3,
       "precio_total": 22.0,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 16,
       "categoria": "remera",
@@ -202,7 +202,7 @@
       "en_oferta": true,
       "precio_oferta": 2.25,
       "precio_total": 15.0,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 2332,
       "categoria": "medias",
@@ -211,7 +211,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 18.99,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 23,
       "categoria": "medias",
@@ -220,7 +220,7 @@
       "en_oferta": true,
       "precio_oferta": 4.5,
       "precio_total": 30.0,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 24,
       "categoria": "remera",
@@ -285,7 +285,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 14.99,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 31,
       "categoria": "medias",
@@ -294,7 +294,7 @@
       "en_oferta": true,
       "precio_oferta": 2.7,
       "precio_total": 18.0,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 32,
       "categoria": "medias",
@@ -303,7 +303,7 @@
       "en_oferta": true,
       "precio_oferta": 3.6,
       "precio_total": 24.0,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 33,
       "categoria": "remera",
@@ -367,7 +367,7 @@
       "en_oferta": true,
       "precio_oferta": 2.7,
       "precio_total": 18.0,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 40,
       "categoria": "medias",
@@ -376,7 +376,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 12.99,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 41,
       "categoria": "medias",
@@ -385,7 +385,7 @@
       "en_oferta": true,
       "precio_oferta": 3.0,
       "precio_total": 20.0,
-      "imagen": "medias.webp"
+      "imagen": "medias.jpg"
     },
     { "id": 42,
       "categoria": "remera",

@@ -2,9 +2,9 @@
 const ContactoPage = () => {
   return (
     <>
-      <div className="text-center   p-6 font-bold bg-blue-900 text-white">
-        <p className="text-5xl font-bold">Contactanos</p>
-        <p className="text-sm mt-1">Obtene mas información acerca de nuestros productos</p>
+      <div className="text-center p-5 font-bold bg-blue-900 text-white">
+        <p className="text-4xl font-bold">Contactanos</p>
+        <p className="text-sm mt-1 font-normal">Obtene mas información acerca de nuestros productos</p>
       </div>
 
       <section className="p-10">
@@ -12,7 +12,7 @@ const ContactoPage = () => {
         <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-14">
 
           <div className="md:w-1/2">
-            <img className="shadow-2xl rounded-lg filter " src="./women2.webp" alt="women" />
+            <img className="shadow-2xl rounded-lg filter " src="./women2.jpg" alt="women" />
           </div>
 
           <div className="md:w-1/2 w-full flex justify-center flex-col items-center">

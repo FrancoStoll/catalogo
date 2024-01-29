@@ -5,10 +5,11 @@ import { ReactNode, createContext, useEffect, useState } from 'react';
 interface CartContextInterface {
     cart: ProductosCart[],
     handleProductModal: (productoModal: ProductosCart) => void
+    handleProductDelete: (id: number) => void
 }
 
 export interface ProductosCart {
-    id?: number;
+    id: number;
     categoria?: string;
     nombre?: string;
     descripcion?: string;
@@ -62,12 +63,20 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
 
     }
 
+    const handleProductDelete = (id: number) => {
+
+        const updateCart = cart.filter(item => item.id !== id)
+
+        setCart(updateCart)
+
+    }
+
 
     return (
         <CartContext.Provider value={{
             cart,
             handleProductModal,
-
+            handleProductDelete,
         }
         }>
             {children}

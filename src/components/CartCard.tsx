@@ -1,7 +1,11 @@
 import { ProductosCart } from "../context/CartProvider"
+import useCart from '../hooks/useCart';
 
 
 const CartCard = ({ item }: { item: ProductosCart }) => {
+
+
+    const  {handleProductDelete} = useCart()
 
     return (
 
@@ -42,7 +46,7 @@ const CartCard = ({ item }: { item: ProductosCart }) => {
 
 
             <div className="flex justify-center items-center mt-4">
-                <button className="bg-red-600 py-2 px-3 rounded-lg shadow text-white ">Eliminar</button>
+                <button className="bg-red-600 py-2 px-3 rounded-lg shadow text-white" onClick={() => handleProductDelete(+item.id)}>Eliminar</button>
             </div>
 
         </div>

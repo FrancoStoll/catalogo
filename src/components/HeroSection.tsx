@@ -22,7 +22,7 @@ const HeroSection = () => {
                 </div>
 
                 <div className="md:w-1/2 flex justify-center items-center md:justify-end">
-                    <img src="./heroimage.webp" alt="heroimg" className="w-full h-full object-cover filter brightness-75  py-10" />
+                    <img src="./hero.webp" alt="heroimg" className="w-full h-4/5 object-cover filter brightness-75  py-10" />
 
                 </div>
             </div>
