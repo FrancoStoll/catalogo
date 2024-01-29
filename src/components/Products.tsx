@@ -83,9 +83,9 @@ const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product)
                         <div className="flex flex-col md:flex-row gap-4 p-4 justify-start md:justify-center items-center text-lg">
                             <p className="font-bold">Filtro:</p>
 
-                            <div className="flex gap-3 items-center">
+                            <div className="flex gap-3 items-center justify-between md:justify-center w-full">
                                 <label htmlFor="categoria" className="text-gray-700">Categoría:</label>
-                                <select onChange={(e) => setCategoria(e.target.value)} className="p-3 border rounded-lg" name="categoria" id="categoria">
+                                <select onChange={(e) => setCategoria(e.target.value)} className="p-3 border rounded-lg w-[300px]" name="categoria" id="categoria">
                                     <option value="" disabled>Seleccione una categoría</option>
                                     <option value="all">Todas</option>
                                     <option value="remera">Remeras</option>
@@ -94,9 +94,9 @@ const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product)
                                 </select>
                             </div>
 
-                            <div className="flex gap-3 items-center">
+                            <div className="flex gap-3 items-center w-full justify-between md:justify-center">
                                 <label htmlFor="precio" className="text-gray-700">Precio máximo:</label>
-                                <input value={+precioMax} onChange={e => setPrecioMax(+e.target.value)} className="p-3 border rounded-lg" type="text" id="precio" name="precio" placeholder="Ingrese precio máximo" />
+                                <input value={+precioMax} onChange={e => setPrecioMax(+e.target.value)} className="p-3 border rounded-lg w-[300px]" type="text" id="precio" name="precio" placeholder="Ingrese precio máximo" />
                             </div>
 
                             <button className="bg-blue-900 py-2 px-3 rounded-lg shadow text-white" onClick={filterProducts}>Filtrar</button>
