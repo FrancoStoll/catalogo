@@ -7,13 +7,13 @@ const Gallery = () => {
             {/* container1 */}
             <div className="grid gap-4">
                 <div>
-                    <img src="women1.jpg" alt="women1" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="women1.jpg" alt="women1" className="h-auto max-w-full rounded-md shadow" />
                 </div>
                 <div>
-                    <img src="hombre2.jpg" alt="women2" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="hombre2.jpg" alt="women2" className="h-auto max-w-full rounded-md shadow" />
                 </div>
                 <div>
-                    <img src="hombre1.jpg" alt="hombre1" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="hombre1.jpg" alt="hombre1" className="h-auto max-w-full rounded-md shadow" />
                 </div>
             </div>
 
@@ -21,13 +21,13 @@ const Gallery = () => {
 
             <div className="grid gap-2">
                 <div>
-                    <img src="women2.jpg" alt="women1" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="women2.jpg" alt="women1" className="h-auto max-w-full rounded-md shadow" />
                 </div>
                 <div>
-                    <img src="women1.jpg" alt="women2" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="women1.jpg" alt="women2" className="h-auto max-w-full rounded-md shadow" />
                 </div>
                 <div>
-                    <img src="women4.jpg" alt="hombre1" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="women4.jpg" alt="hombre1" className="h-auto max-w-full rounded-md shadow" />
                 </div>
             </div>
 
@@ -35,13 +35,13 @@ const Gallery = () => {
 
             <div className="grid gap-4">
                 <div>
-                    <img src="hombre2.jpg" alt="women1" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="hombre2.jpg" alt="women1" className="h-auto max-w-full rounded-md shadow" />
                 </div>
                 <div>
-                    <img src="women2.jpg" alt="women2" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="women2.jpg" alt="women2" className="h-auto max-w-full rounded-md shadow" />
                 </div>
                 <div>
-                    <img src="women1.jpg" alt="hombre1" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="women1.jpg" alt="hombre1" className="h-auto max-w-full rounded-md shadow" />
                 </div>
             </div>
 
@@ -49,13 +49,13 @@ const Gallery = () => {
 
             <div className="grid gap-4">
                 <div>
-                    <img src="women4.jpg" alt="women1" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="women4.jpg" alt="women1" className="h-auto max-w-full rounded-md shadow" />
                 </div>
                 <div>
-                    <img src="hombre1.jpg" alt="women2" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="hombre1.jpg" alt="women2" className="h-auto max-w-full rounded-md shadow" />
                 </div>
                 <div>
-                    <img src="women3.jpg" alt="hombre1" className="h-auto max-w-full rounded-xl shadow" />
+                    <img src="women3.jpg" alt="hombre1" className="h-auto max-w-full rounded-md shadow" />
                 </div>
             </div>
 

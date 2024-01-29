@@ -7,9 +7,10 @@ const CartCard = ({ item }: { item: ProductosCart }) => {
 
     const  {handleProductDelete} = useCart()
 
+
     return (
 
-        <div className="flex flex-col md:flex-row md:gap-10 gap-2 border-b last:border-none py-5">
+        <div className="flex flex-col md:flex-row md:gap-10 gap-2 border-b last:border-none py-5 xl:h-[180px]">
 
             <div className="p-2 flex-2">
                 <p className="font-bold">Producto</p>
@@ -40,7 +41,7 @@ const CartCard = ({ item }: { item: ProductosCart }) => {
                 <p className="font-bold text-center">Precio</p>
 
                 <div className="flex items-center h-full">
-                    <p className="text-xl font-bold text-blue-900">${item?.precio_total}</p>
+                    <p className="text-xl font-medium text-blue-900">${item?.precio_total}</p>
                 </div>
             </div>
 

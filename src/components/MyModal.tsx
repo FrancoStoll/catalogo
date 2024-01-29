@@ -73,7 +73,7 @@ function MyModal({ closeModal, productModal }: { closeModal: () => void, product
 							onClick={() => {
 								if (sizes !== '') {
 
-									const cartItem = { ...productModal, amount, sizes: sizes }
+									const cartItem = { ...productModal, amount, size: sizes }
 
 									handleProductModal(cartItem)
 

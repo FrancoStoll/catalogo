@@ -16,7 +16,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 49.99,
-      "imagen": "remeranegra.webp"
+      "imagen": "remera.jpg"
     },
 
     { "id": 3,
@@ -26,7 +26,7 @@
       "en_oferta": true,
       "precio_oferta": 10.5,
       "precio_total": 70.0,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
     { "id": 4,
       "categoria": "pantalon",
@@ -47,7 +47,7 @@
       "precio_total": 12.0,
       "imagen": "medias.jpg"
     },
-    { "id": 6,
+    { "id": 6,  
       "categoria": "medias",
       "nombre": "Medias Informales",
       "descripcion": "Cómodas para el día a día.",
@@ -63,7 +63,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 29.99,
-      "imagen": "remeranegra.webp"
+      "imagen": "remera.jpg"
     },
     { "id": 8,
       "categoria": "remera",
@@ -81,7 +81,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 19.99,
-      "imagen": "remeranegra.webp"
+      "imagen": "remera.jpg"
     },
 
     { "id": 10,
@@ -91,7 +91,7 @@
       "en_oferta": true,
       "precio_oferta": 11.25,
       "precio_total": 75.0,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
     { "id": 11,
       "categoria": "pantalon",
@@ -100,7 +100,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 62.5,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
     { "id": 12,
       "categoria": "pantalon",
@@ -155,7 +155,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 34.99,
-      "imagen": "remeranegra.webp"
+      "imagen": "remera.jpg"
     },
     { "id": 18,
       "categoria": "remera",
@@ -174,7 +174,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 79.99,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
     { "id": 20,
       "categoria": "pantalon",
@@ -183,7 +183,7 @@
       "en_oferta": true,
       "precio_oferta": 12.0,
       "precio_total": 80.0,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
     { "id": 21,
       "categoria": "pantalon",
@@ -192,7 +192,7 @@
       "en_oferta": true,
       "precio_oferta": 8.25,
       "precio_total": 55.0,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
 
     { "id": 22,
@@ -238,7 +238,7 @@
       "en_oferta": true,
       "precio_oferta": 10.2,
       "precio_total": 68.0,
-      "imagen": "remeranegra.webp"
+      "imagen": "remera.jpg"
     },
     { "id": 26,
       "categoria": "remera",
@@ -257,7 +257,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 59.99,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
     { "id": 28,
       "categoria": "pantalon",
@@ -266,7 +266,7 @@
       "en_oferta": true,
       "precio_oferta": 7.5,
       "precio_total": 50.0,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
     { "id": 29,
       "categoria": "pantalon",
@@ -275,7 +275,7 @@
       "en_oferta": true,
       "precio_oferta": 9.0,
       "precio_total": 60.0,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
 
     { "id": 30,
@@ -339,7 +339,7 @@
       "en_oferta": false,
       "precio_oferta": 0.0,
       "precio_total": 44.99,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
     { "id": 37,
       "categoria": "pantalon",
@@ -348,7 +348,7 @@
       "en_oferta": true,
       "precio_oferta": 8.25,
       "precio_total": 55.0,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
     { "id": 38,
       "categoria": "pantalon",
@@ -357,7 +357,7 @@
       "en_oferta": true,
       "precio_oferta": 11.4,
       "precio_total": 76.0,
-      "imagen": "pantalon.webp"
+      "imagen": "pantalon.jpg"
     },
 
     { "id": 39,
@@ -395,6 +395,328 @@
       "precio_oferta": 11.25,
       "precio_total": 75.0,
       "imagen": "remeranegra.webp"
+    },
+    { "id": 43,
+      "categoria": "remera",
+      "nombre": "Remera Manga Corta Básica",
+      "descripcion": "Elemento esencial para cualquier armario.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 29.99,
+      "imagen": "remeranegra.webp"
+    },
+    { "id": 44,
+      "categoria": "remera",
+      "nombre": "Remera con Cuello en V",
+      "descripcion": "Elegancia casual con un toque moderno.",
+      "en_oferta": true,
+      "precio_oferta": 9.0,
+      "precio_total": 60.0,
+      "imagen": "remera.jpg"
+    },
+
+    { "id": 45,
+      "categoria": "pantalon",
+      "nombre": "Pantalón de Chándal",
+      "descripcion": "Comodidad sin sacrificar el estilo.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 44.99,
+      "imagen": "pantalon.jpg"
+    },
+    { "id": 46,
+      "categoria": "pantalon",
+      "nombre": "Pantalón Skinny",
+      "descripcion": "Corte ajustado para un look moderno.",
+      "en_oferta": true,
+      "precio_oferta": 8.25,
+      "precio_total": 55.0,
+      "imagen": "pantalon.jpg"
+    },
+    { "id": 47,
+      "categoria": "pantalon",
+      "nombre": "Pantalón de Trabajo",
+      "descripcion": "Durabilidad y funcionalidad para el trabajo.",
+      "en_oferta": true,
+      "precio_oferta": 11.4,
+      "precio_total": 76.0,
+      "imagen": "pantalon.jpg"
+    },
+    { "id": 48,
+      "categoria": "medias",
+      "nombre": "Calcetines de Lana",
+      "descripcion": "Calidez y suavidad para días fríos.",
+      "en_oferta": true,
+      "precio_oferta": 2.7,
+      "precio_total": 18.0,
+      "imagen": "medias.jpg"
+    },
+    { "id": 49,
+      "categoria": "medias",
+      "nombre": "Medias Invisibles",
+      "descripcion": "Diseño discreto para zapatos bajos.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 12.99,
+      "imagen": "medias.jpg"
+    },
+    { "id": 50,
+      "categoria": "medias",
+      "nombre": "Medias de Compresión Graduada",
+      "descripcion": "Mejora la circulación sanguínea durante el día.",
+      "en_oferta": true,
+      "precio_oferta": 3.0,
+      "precio_total": 20.0,
+      "imagen": "medias.jpg"
+    },
+    { "id": 51,
+      "categoria": "remera",
+      "nombre": "Remera Estampada Elegante",
+      "descripcion": "Patrón elegante para ocasiones especiales.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 35.99,
+      "imagen": "remeranegra.webp"
+    },
+    { "id": 52,
+      "categoria": "remera",
+      "nombre": "Remera Manga Larga Rayada",
+      "descripcion": "Estilo a rayas para días frescos.",
+      "en_oferta": true,
+      "precio_oferta": 9.6,
+      "precio_total": 64.0,
+      "imagen": "remera.jpg"
+    },
+    { "id": 53,
+      "categoria": "remera",
+      "nombre": "Remera Deportiva Sin Mangas",
+      "descripcion": "Libertad de movimiento para actividades físicas.",
+      "en_oferta": true,
+      "precio_oferta": 7.8,
+      "precio_total": 52.0,
+      "imagen": "remeranegra.webp"
+    },
+
+    { "id": 54,
+      "categoria": "pantalon",
+      "nombre": "Pantalón Jogger Estampado",
+      "descripcion": "Comodidad con un toque de estilo urbano.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 49.99,
+      "imagen": "pantalon.jpg"
+    },
+    { "id": 55,
+      "categoria": "pantalon",
+      "nombre": "Pantalón Cargo de Camuflaje",
+      "descripcion": "Estilo militar para un look audaz.",
+      "en_oferta": true,
+      "precio_oferta": 10.2,
+      "precio_total": 68.0,
+      "imagen": "pantalon.jpg"
+    },
+    { "id": 56,
+      "categoria": "pantalon",
+      "nombre": "Pantalón Casual de Corte Recto",
+      "descripcion": "Versatilidad para cualquier ocasión.",
+      "en_oferta": true,
+      "precio_oferta": 8.75,
+      "precio_total": 58.33,
+      "imagen": "pantalon.jpg"
+    },
+
+    { "id": 57,
+      "categoria": "medias",
+      "nombre": "Medias Deportivas Tobilleras",
+      "descripcion": "Soporte y comodidad para entrenamientos.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 14.99,
+      "imagen": "medias.jpg"
+    },
+    { "id": 58,
+      "categoria": "medias",
+      "nombre": "Pack de Medias Invisibles",
+      "descripcion": "Diseño discreto para calzado bajo.",
+      "en_oferta": true,
+      "precio_oferta": 2.4,
+      "precio_total": 16.0,
+      "imagen": "medias.jpg"
+    },
+    { "id": 59,
+      "categoria": "medias",
+      "nombre": "Medias Altas con Encaje",
+      "descripcion": "Toque elegante para ocasiones formales.",
+      "en_oferta": true,
+      "precio_oferta": 4.5,
+      "precio_total": 30.0,
+      "imagen": "medias.jpg"
+    },
+    { "id": 60,
+      "categoria": "remera",
+      "nombre": "Remera Lisa",
+      "descripcion": "Simple y versátil.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 19.99,
+      "imagen": "remeranegra.webp"
+    },
+    { "id": 61,
+      "categoria": "remera",
+      "nombre": "Remera con Bolsillo",
+      "descripcion": "Práctico y con estilo.",
+      "en_oferta": true,
+      "precio_oferta": 6.3,
+      "precio_total": 42.0,
+      "imagen": "remeranegra.webp"
+    },
+    { "id": 62,
+      "categoria": "remera",
+      "nombre": "Remera Sin Mangas",
+      "descripcion": "Libertad de movimiento.",
+      "en_oferta": true,
+      "precio_oferta": 5.4,
+      "precio_total": 36.0,
+      "imagen": "remeranegra.webp"
+    },
+
+    { "id": 63,
+      "categoria": "pantalon",
+      "nombre": "Pantalón Casual de Tela",
+      "descripcion": "Comodidad para el día a día.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 54.99,
+      "imagen": "pantalon.webp"
+    },
+    { "id": 64,
+      "categoria": "pantalon",
+      "nombre": "Pantalón Deportivo con Franjas",
+      "descripcion": "Estilo atlético moderno.",
+      "en_oferta": true,
+      "precio_oferta": 9.75,
+      "precio_total": 65.0,
+      "imagen": "pantalon.jpg"
+    },
+    { "id": 65,
+      "categoria": "pantalon",
+      "nombre": "Pantalón Slim Fit",
+      "descripcion": "Corte ajustado y elegante.",
+      "en_oferta": true,
+      "precio_oferta": 7.5,
+      "precio_total": 50.0,
+      "imagen": "pantalon.webp"
+    },
+
+    { "id": 66,
+      "categoria": "medias",
+      "nombre": "Medias Deportivas Tobilleras",
+      "descripcion": "Soporte y transpirabilidad.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 12.99,
+      "imagen": "medias.jpg"
+    },
+    { "id": 67,
+      "categoria": "medias",
+      "nombre": "Medias de Colores Variados",
+      "descripcion": "Agrega diversidad al estilo.",
+      "en_oferta": true,
+      "precio_oferta": 2.1,
+      "precio_total": 14.0,
+      "imagen": "medias.jpg"
+    },
+    { "id": 68,
+      "categoria": "medias",
+      "nombre": "Calcetines de Senderismo",
+      "descripcion": "Protección para aventuras al aire libre.",
+      "en_oferta": true,
+      "precio_oferta": 3.9,
+      "precio_total": 26.0,
+      "imagen": "medias.jpg"
+    },
+    { "id": 69,
+      "categoria": "remera",
+      "nombre": "Remera Estampada Bohemia",
+      "descripcion": "Diseño bohemio para un look relajado.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 28.99,
+      "imagen": "remeranegra.webp"
+    },
+    { "id": 70,
+      "categoria": "remera",
+      "nombre": "Remera Manga Raglán a Rayas",
+      "descripcion": "Estilo casual con un toque deportivo.",
+      "en_oferta": true,
+      "precio_oferta": 7.8,
+      "precio_total": 52.0,
+      "imagen": "remeranegra.webp"
+    },
+    { "id": 71,
+      "categoria": "remera",
+      "nombre": "Remera de Cuello Redondo",
+      "descripcion": "Versatilidad y comodidad diaria.",
+      "en_oferta": true,
+      "precio_oferta": 6.6,
+      "precio_total": 44.0,
+      "imagen": "remeranegra.webp"
+    },
+
+    { "id": 72,
+      "categoria": "pantalon",
+      "nombre": "Pantalón Cargo con Bolsillos",
+      "descripcion": "Funcionalidad y estilo urbano.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 59.99,
+      "imagen": "pantalon.jpg"
+    },
+    { "id": 73,
+      "categoria": "pantalon",
+      "nombre": "Pantalón Jogger de Camuflaje",
+      "descripcion": "Estilo moderno para actividades casuales.",
+      "en_oferta": true,
+      "precio_oferta": 9.0,
+      "precio_total": 60.0,
+      "imagen": "pantalon.jpg"
+    },
+    { "id": 331,
+      "categoria": "pantalon",
+      "nombre": "Pantalón Formal Slim Fit",
+      "descripcion": "Elegancia para ocasiones especiales.",
+      "en_oferta": true,
+      "precio_oferta": 14.4,
+      "precio_total": 96.0,
+      "imagen": "pantalon.jpg"
+    },
+
+    { "id": 3331,
+      "categoria": "medias",
+      "nombre": "Medias Tobilleras Deportivas",
+      "descripcion": "Soporte y comodidad para entrenamientos.",
+      "en_oferta": false,
+      "precio_oferta": 0.0,
+      "precio_total": 14.99,
+      "imagen": "medias.jpg"
+    },
+    { "id": 2221,
+      "categoria": "medias",
+      "nombre": "Medias de Algodón Suaves",
+      "descripcion": "Comodidad para el uso diario.",
+      "en_oferta": true,
+      "precio_oferta": 2.25,
+      "precio_total": 15.0,
+      "imagen": "medias.jpg"
+    },
+    { "id": 1111,
+      "categoria": "medias",
+      "nombre": "Pack de Calcetines Coloridos",
+      "descripcion": "Agrega alegría a tu colección de calcetines.",
+      "en_oferta": true,
+      "precio_oferta": 4.8,
+      "precio_total": 32.0,
+      "imagen": "medias.jpg"
     }
   ]
 }
