@@ -6,6 +6,9 @@ interface CartContextInterface {
     cart: ProductosCart[],
     handleProductModal: (productoModal: ProductosCart) => void
     handleProductDelete: (id: number) => void
+    handleAddAmountCart: (id: number) => void
+    handleRemoveAmountCart: (id: number, amount: number) => void
+
 }
 
 export interface ProductosCart {
@@ -26,14 +29,12 @@ export interface ProductosCart {
 const CartContext = createContext({} as CartContextInterface)
 
 
-
 const localStorageValue = localStorage.getItem('cart');
 const initialState = localStorageValue ? JSON.parse(localStorageValue) : []
 
 const CartProvider = ({ children }: { children: ReactNode }) => {
 
     const [cart, setCart] = useState<ProductosCart[]>(initialState)
-
 
 
 
@@ -71,12 +72,50 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
 
     }
 
+    const handleAddAmountCart = (id: number) => {
+
+
+
+        const addAmount = cart.map(item => {
+
+            if (item.id === id) {
+                return { ...item, amount: (item.amount || 1) + 1 }
+            } else {
+                return item
+            }
+        })
+        setCart(addAmount)
+
+
+    }
+
+    const handleRemoveAmountCart = (id: number, amount: number) => {
+
+
+        if (amount <= 0) return
+
+        const removeAmount = cart.map(item => {
+
+            if (item.id === id) {
+                return { ...item, amount: (item.amount || 1) - 1 }
+            } else {
+                return item
+            }
+        })
+        setCart(removeAmount)
+
+
+    }
+
 
     return (
         <CartContext.Provider value={{
             cart,
             handleProductModal,
             handleProductDelete,
+            handleAddAmountCart,
+            handleRemoveAmountCart
+
         }
         }>
             {children}
