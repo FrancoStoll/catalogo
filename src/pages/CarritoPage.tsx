@@ -11,9 +11,9 @@ const CarritoPage = () => {
   return (
 
     <>
+      <h1 className="bg-blue-900 text-center text-white py-4 mb-5 text-5xl font-bold">Tú Carrito</h1>
       {cart?.length > 0 ? (
-        <div className="mb-5">
-          <h1 className="bg-blue-900 text-center text-white py-4 mb-5 text-5xl font-bold">Tú Carrito</h1>
+        <div className="mb-10 px-4 md:px-0">
 
 
           <div className="md:flex flex-col lg:flex-row md:gap-10 container mx-auto border p-4 rounded-md min-h-[calc(100vh-45vh)]">
