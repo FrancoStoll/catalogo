@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from 'react';
+import { ReactNode, createContext, useEffect, useState } from 'react';
 
 
 
@@ -25,10 +25,23 @@ export interface ProductosCart {
 const CartContext = createContext({} as CartContextInterface)
 
 
+
+const localStorageValue = localStorage.getItem('cart');
+const initialState = localStorageValue ? JSON.parse(localStorageValue) : []
+
 const CartProvider = ({ children }: { children: ReactNode }) => {
 
-    const [cart, setCart] = useState<ProductosCart[]>([])
+    const [cart, setCart] = useState<ProductosCart[]>(initialState)
 
+
+
+
+    useEffect(() => {
+
+        // add to local storage
+        localStorage.setItem('cart', JSON.stringify(cart))
+
+    }, [cart])
 
 
     const handleProductModal = (data: ProductosCart) => {
@@ -46,6 +59,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
             ...prev,
             data
         ]))
+
     }
 
 

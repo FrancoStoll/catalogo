@@ -15,7 +15,7 @@ const CarritoPage = () => {
           <h1 className="bg-blue-900 text-center text-white py-4 mb-5 text-5xl font-bold">Tú Carrito</h1>
 
 
-          <div className="md:flex flex-col lg:flex-row md:gap-10 container mx-auto border py-4 px-6 rounded-md">
+          <div className="md:flex flex-col lg:flex-row md:gap-10 container mx-auto border p-4 rounded-md">
 
             {/* parte de los productos */}
             <div className="w-9/10 xl:w-2/3">
@@ -33,9 +33,7 @@ const CarritoPage = () => {
 
             <div className="w-9/10 xl:w-1/3">
 
-
-              <CartResumen cart={cart}/>
-
+              <CartResumen cart={cart} />
             </div>
           </div>
         </div>

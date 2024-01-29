@@ -1,7 +1,24 @@
+
 import { ProductosCart } from "../context/CartProvider"
 
 const CartResumen = ({ cart }: { cart: ProductosCart[] }) => {
 
+
+
+
+
+
+    function handleMsjWahtsApp() {
+
+
+
+        const cartMsj = cart.map((msj, index) => {
+            return `${index + 1}. ID: ${msj.id} Nombre: ${msj.nombre} Precio: $${msj.precio_total}\n`;
+        }).join('');
+
+
+        window.open(`https://api.whatsapp.com/send?phone=3454473489&text=${encodeURIComponent(cartMsj)}`)
+    }
 
     return (
         <div className="sticky top-0">
@@ -20,7 +37,9 @@ const CartResumen = ({ cart }: { cart: ProductosCart[] }) => {
                 </div>
             </div>
             <div className="flex mt-5">
-                <button className="py-3 px-4 bg-blue-900 uppercase font-bold text-white rounded-md w-full">Realizar Pedido</button>
+
+                <button className="py-3 px-4 bg-blue-900 uppercase font-bold text-white rounded-md w-full" onClick={handleMsjWahtsApp}>Realizar Pedido</button>
+
             </div>
         </div>
     )

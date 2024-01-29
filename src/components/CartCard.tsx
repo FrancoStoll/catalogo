@@ -7,19 +7,19 @@ const CartCard = ({ item }: { item: ProductosCart }) => {
 
         <div className="flex flex-col md:flex-row md:gap-10 gap-2 border-b last:border-none py-5">
 
-            <div className="p-2">
+            <div className="p-2 flex-2">
                 <p className="font-bold">Producto</p>
 
                 <div className="flex flex-col md:flex-row gap-4 justify-center items-center h-full">
-                    <img src={`./${item?.imagen}`} alt={item?.nombre} width={150} height={150} className="rounded-md" />
+                    <img src={`./${item?.imagen}`} alt={item?.nombre} className="rounded w-32 h-3w-32" />
                     <div className="flex flex-col justify-center items-start">
-                        <p className="text-2xl text-blue-900 uppercase overflow-hidden whitespace-nowrap overflow-ellipsis" style={{ maxWidth: "15ch" }}>{item?.nombre}</p>
+                        <p className="text-xl text-blue-900 overflow-hidden whitespace-nowrap overflow-ellipsis" style={{ maxWidth: "15ch" }}>{item?.nombre}</p>
                         <p className="text-sm text-slate-600 overflow-hidden whitespace-nowrap overflow-ellipsis" style={{ maxWidth: "20ch" }}>{item.descripcion}</p>
                         <p className="">Talle:{" "} <span className="uppercase">{item?.size}</span></p>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center gap-2 flex-1">
                 <p className=" font-bold">Cantidad</p>
 
                 <div className='flex justify-center items-center h-full gap-1'>
@@ -32,7 +32,7 @@ const CartCard = ({ item }: { item: ProductosCart }) => {
                     </svg>
                 </div>
             </div>
-            <div className="flex flex-col items-center  mt-10 xl:mt-0">
+            <div className="flex flex-col items-center flex-1">
                 <p className="font-bold text-center">Precio</p>
 
                 <div className="flex items-center h-full">

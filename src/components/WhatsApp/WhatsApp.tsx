@@ -5,7 +5,7 @@ const WhatsAppButton = () => {
             href="https://api.whatsapp.com/send?phone=123456789&text=Hola"
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-md cursor-pointer"
+            className="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-md cursor-pointer z-10"
         >
             <svg
                 className="w-8 h-8 object-cover"
