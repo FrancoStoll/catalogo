@@ -92,7 +92,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     const handleRemoveAmountCart = (id: number, amount: number) => {
 
 
-        if (amount <= 0) return
+        if (amount <= 1) return
 
         const removeAmount = cart.map(item => {
 

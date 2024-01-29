@@ -51,7 +51,13 @@ function MyModal({ closeModal, productModal }: { closeModal: () => void, product
 						<div className='mt-2'>
 							<p>Modificar cantidad:</p>
 							<div className='flex items-center gap-2'>
-								<svg onClick={() => setAmount(prev => prev - 1)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-9 h-9">
+								<svg onClick={() => {
+									if (amount <= 0) {
+										return
+									} else {
+										setAmount(prev => prev - 1)
+									}
+								}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-9 h-9">
 									<path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
 								</svg>
 								<input type="text" value={+amount} className='w-9 h-9 text-2xl text-center' onChange={(e) => setAmount(+e.target.value)} />
