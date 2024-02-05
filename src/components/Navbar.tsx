@@ -44,7 +44,7 @@ const Navbar = () => {
                         {pages.map((page) => {
                             return (
                                 <Link to={page.path} key={page.path}>
-                                    <li className={`${location.pathname == page.path ? 'border-b-2 border-blue-900'  : ''} cursor-pointer  px-4 py-2 text-gray-700 hover:bg-gray-100`} >
+                                    <li className={`${location.pathname == page.path ? 'border-b-2 border-blue-900' : ''} cursor-pointer  px-4 py-2 text-gray-700 hover:bg-gray-100`} >
                                         {page.name}
                                     </li>
                                 </Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
 
 
 
-                        <div className={`fixed z-10 top-0 right-0 h-[550px] bg-white transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden w-64 p-4`}>
+                        <div className={`fixed z-50 top-0 right-0 h-[550px] bg-white transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden w-64 p-4 z-50`}>
                             <div className="flex justify-end">
                                 <svg onClick={toggleMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 cursor-pointer">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
