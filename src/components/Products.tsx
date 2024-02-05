@@ -9,11 +9,12 @@ const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product)
 
     // Productos y Filtros de productos
     const [products, setProducts] = useState<Product[]>([])
-    const [categoria, setCategoria] = useState<string>('');
+    const [filterPrductos, setFilterProducts] = useState<Product[]>()
+    const [categoria, setCategoria] = useState<string>('all');
     const [precioMax, setPrecioMax] = useState<number>(0);
 
     // Paginación
-    const totalProducts = products.length
+    const totalProducts = filterPrductos?.length
     const [productsPerPage] = useState(12)
     const [currentPage, setCurrentPage] = useState(1)
     const [loading, setLoading] = useState<boolean>(true)
@@ -23,6 +24,8 @@ const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product)
     const firstIndex = lastIndex - productsPerPage // 6 - 6 || 12 - 6 = 6
 
     useEffect(() => {
+
+
         const fetchProducts = async () => {
             setLoading(true);
 
@@ -30,6 +33,7 @@ const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product)
                 const response = await fetch('./data.json');
                 const data = await response.json();
                 setProducts(data.productos);
+                setFilterProducts(data.productos)
             } catch (error) {
                 console.error("Error al cargar productos:", error);
             } finally {
@@ -39,7 +43,9 @@ const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product)
         };
 
         fetchProducts();
-    }, [categoria, precioMax]);
+
+
+    }, []);
 
 
 
@@ -47,23 +53,31 @@ const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product)
 
 
     const filterProducts = () => {
-        setLoading(true)
+
         // Filtrar por categoría
-        let filteredProducts = products;
+        let filtrados = [...products]
 
 
-        if (categoria !== 'all' && categoria !== '') {
-            filteredProducts = products.filter(prod => prod.categoria === categoria);
+
+        if (categoria !== 'all') {
+            filtrados = products.filter(item => item.categoria === categoria)
         }
 
-        // Filtrar por precio máximo
-        if (precioMax) {
-            filteredProducts = filteredProducts.filter(prod => prod.precio_total <= precioMax);
+        if (precioMax > 0) {
+            filtrados = filtrados.filter(precio => precio.precio_total < precioMax)
         }
 
-        setProducts(filteredProducts);
-        setLoading(false)
+
+        setFilterProducts(filtrados)
+
+
     }
+
+
+
+
+
+
 
 
     return (
@@ -111,7 +125,7 @@ const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product)
 
                 <div className="container place-items-center mx-auto py-5 grid gap-y-4  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-                    {products.map((prod: Product) => (
+                    {filterPrductos?.map((prod: Product) => (
 
                         <Card key={prod.id} prod={prod} handleModalProduct={handleModalProduct} />
 
