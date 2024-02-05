@@ -10,6 +10,8 @@ import AboutPage from './pages/AboutPage.tsx'
 import CarritoPage from './pages/CarritoPage.tsx'  
 import { CartProvider } from './context/CartProvider.tsx'
 
+import 'animate.css'
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
 
   
