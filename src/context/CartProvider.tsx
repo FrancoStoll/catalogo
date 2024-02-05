@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -6,8 +7,8 @@ interface CartContextInterface {
     cart: ProductosCart[],
     handleProductModal: (productoModal: ProductosCart) => void
     handleProductDelete: (id: number) => void
-    handleAddAmountCart: (id: number) => void
-    handleRemoveAmountCart: (id: number, amount: number) => void
+    handleAddAmountCart: (id: number, size: string) => void
+    handleRemoveAmountCart: (id: number, amount: number, size: string) => void
 
 }
 
@@ -22,7 +23,7 @@ export interface ProductosCart {
     imagen?: string;
     amount?: number,
     size?: string;
-
+    unique_id: string;
 }
 
 
@@ -35,7 +36,7 @@ const initialState = localStorageValue ? JSON.parse(localStorageValue) : []
 const CartProvider = ({ children }: { children: ReactNode }) => {
 
     const [cart, setCart] = useState<ProductosCart[]>(initialState)
-
+    const navigate = useNavigate()
 
 
     useEffect(() => {
@@ -59,12 +60,20 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
         }
         setCart(prev => ([
             ...prev,
-            data
+            data,
+
         ]))
+
+        navigate('/carrito')
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
 
     }
 
     const handleProductDelete = (id: number) => {
+
 
         const updateCart = cart.filter(item => item.id !== id)
 
@@ -72,37 +81,44 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
 
     }
 
-    const handleAddAmountCart = (id: number) => {
+    const handleAddAmountCart = (id: number, size: string) => {
 
 
+        const existProduct = cart.find(c => c.id === id && c.size === size)
+        if (existProduct) {
+            const addAmount = cart.map(item => {
 
-        const addAmount = cart.map(item => {
+                if (item.id === id && item.size === size) {
+                    return { ...item, amount: (item.amount || 1) + 1 }
+                } else {
+                    return item
+                }
+            })
+            setCart(addAmount)
+        }
 
-            if (item.id === id) {
-                return { ...item, amount: (item.amount || 1) + 1 }
-            } else {
-                return item
-            }
-        })
-        setCart(addAmount)
 
 
     }
 
-    const handleRemoveAmountCart = (id: number, amount: number) => {
+    const handleRemoveAmountCart = (id: number, amount: number, size: string) => {
 
+        const existProduct = cart.find(c => c.id === id && c.size === size)
 
-        if (amount <= 1) return
+        if (existProduct) {
+            if (amount <= 1) return
 
-        const removeAmount = cart.map(item => {
+            const removeAmount = cart.map(item => {
 
-            if (item.id === id) {
-                return { ...item, amount: (item.amount || 1) - 1 }
-            } else {
-                return item
-            }
-        })
-        setCart(removeAmount)
+                if (item.id === id && item.size === size) {
+                    return { ...item, amount: (item.amount || 1) - 1 }
+                } else {
+                    return item
+                }
+            })
+            setCart(removeAmount)
+        }
+
 
 
     }

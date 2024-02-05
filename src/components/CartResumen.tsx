@@ -25,7 +25,7 @@ const CartResumen = ({ cart }: { cart: ProductosCart[] }) => {
             <div className="flex justify-center items-center">
                 <div className="flex flex-col gap-2 border p-4 mt-5 rounded-xl w-full">
                     {cart && cart.map((item) => (
-                        <div key={item?.id} className="flex justify-between items-center"><p className="font-bold text-sm flex-1">{item.nombre}</p>
+                        <div key={item?.unique_id} className="flex justify-between items-center"><p className="font-bold text-sm flex-1">{item.nombre}</p>
                             <span className="font-bold flex-1 ml-2">x{item?.amount}</span>
                             <p className="font-bold text-blue-900">${item.precio_total && item.amount && (item?.precio_total * item.amount).toFixed(2)}</p>
                         </div>

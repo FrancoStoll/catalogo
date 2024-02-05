@@ -27,13 +27,13 @@ const CartCard = ({ item }: { item: ProductosCart }) => {
                 <p className=" font-bold">Cantidad</p>
 
                 <div className='flex justify-center items-center h-full gap-1'>
-                    <button onClick={() => handleRemoveAmountCart(item.id, item.amount || 0)}>
+                    <button onClick={() => handleRemoveAmountCart(item.id, item.amount || 0, 'notFound')}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-9 h-9">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                     </button>
                     <input type="text" className='w-9 h-9 text-2xl text-center border' value={item?.amount} onChange={() => { }} />
-                    <button onClick={() => handleAddAmountCart(item.id)}>
+                    <button onClick={() => handleAddAmountCart(item.id, item?.size || 'notFound')}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-9 h-9">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />

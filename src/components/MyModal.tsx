@@ -79,7 +79,7 @@ function MyModal({ closeModal, productModal }: { closeModal: () => void, product
 							onClick={() => {
 								if (sizes !== '') {
 
-									const cartItem = { ...productModal, amount, size: sizes }
+									const cartItem = { ...productModal, amount, size: sizes, unique_id: crypto.randomUUID() }
 
 									handleProductModal(cartItem)
 

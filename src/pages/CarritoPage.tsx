@@ -8,6 +8,7 @@ const CarritoPage = () => {
   const { cart } = useCart();
 
 
+
   return (
 
     <>
@@ -21,7 +22,7 @@ const CarritoPage = () => {
               {/* parte de los productos */}
               <div className="w-9/10 xl:w-2/3">
                 {cart?.map((item) => (
-                  <CartCard key={item.id} item={item} />
+                  <CartCard key={item.unique_id} item={item} />
                 ))}
               </div>
               {/* parte del resumen */}
