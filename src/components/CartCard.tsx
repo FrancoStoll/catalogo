@@ -27,7 +27,7 @@ const CartCard = ({ item }: { item: ProductosCart }) => {
                 <p className=" font-bold">Cantidad</p>
 
                 <div className='flex justify-center items-center h-full gap-1'>
-                    <button onClick={() => handleRemoveAmountCart(item.id, item.amount || 0, 'notFound')}>
+                    <button onClick={() => handleRemoveAmountCart(item.id, item.amount || 0, item?.size || 'notFound')}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-9 h-9">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
@@ -51,7 +51,7 @@ const CartCard = ({ item }: { item: ProductosCart }) => {
 
 
             <div className="flex justify-center items-center mt-4">
-                <button className="bg-red-600 py-2 px-3 rounded-lg shadow text-white" onClick={() => handleProductDelete(+item.id)}>Eliminar</button>
+                <button className="bg-red-600 py-2 px-3 rounded-lg shadow text-white" onClick={() => handleProductDelete(item.unique_id)}>Eliminar</button>
             </div>
 
         </div>

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 interface CartContextInterface {
     cart: ProductosCart[],
     handleProductModal: (productoModal: ProductosCart) => void
-    handleProductDelete: (id: number) => void
+    handleProductDelete: (id: string) => void
     handleAddAmountCart: (id: number, size: string) => void
     handleRemoveAmountCart: (id: number, amount: number, size: string) => void
 
@@ -72,10 +72,10 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
 
     }
 
-    const handleProductDelete = (id: number) => {
+    const handleProductDelete = (id: string) => {
 
 
-        const updateCart = cart.filter(item => item.id !== id)
+        const updateCart = cart.filter(item => item.unique_id !== id)
 
         setCart(updateCart)
 

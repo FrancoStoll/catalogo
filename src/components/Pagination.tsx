@@ -2,7 +2,7 @@ interface PaginationProps {
     productsPerPage: number;
     currentPage: number;
     setCurrentPage: (page: number) => void;
-    totalProducts: number;
+    totalProducts: number | undefined;
 }
 
 
@@ -14,7 +14,7 @@ const Pagination = ({ productsPerPage, currentPage, setCurrentPage, totalProduct
     const pageNumer = [];
 
 
-    for (let i = 1; i <= Math.ceil(totalProducts / productsPerPage); i++) {
+    for (let i = 1; i <= Math.ceil((totalProducts || 0) / productsPerPage); i++) {
         pageNumer.push(i)
     }
 
