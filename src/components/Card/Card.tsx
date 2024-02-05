@@ -5,7 +5,7 @@ const Card = ({ prod, handleModalProduct }: { prod: Product, handleModalProduct:
 
 
   return (
-    <div className="w-[300px] shadow-xl pb-5">
+    <div className="w-[300px] shadow-xl pb-5 animate__animated animate__fadeIn">
       <img className="h-[300px] w-[300px] object-cover" src={`./${prod.imagen}`} alt={prod.descripcion} />
 
       <div className="flex flex-col items-start p-5 gap-2">

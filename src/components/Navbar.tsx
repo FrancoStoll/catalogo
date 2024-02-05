@@ -30,16 +30,16 @@ const Navbar = () => {
 
 
     return (
-        <header className="shadow-lg animate__animated animate__fadeInDown">
+        <header className="shadow-lg">
             <div className="container flex justify-between m-auto rounded">
                 <div className="w-20 cursor-pointer">
                     <Link to='/'>
-                        <img src="https://us.123rf.com/450wm/logoking33/logoking332011/logoking33201100066/159766658-plantilla-de-vector-de-dise%C3%B1o-de-logotipo-de-carta-ie-ei-dise%C3%B1o-del-logotipo-ie-ei.jpg?ver=6" alt="logo" />
+                        <img src="https://us.123rf.com/450wm/logoking33/logoking332011/logoking33201100066/159766658-plantilla-de-vector-de-dise%C3%B1o-de-logotipo-de-carta-ie-ei-dise%C3%B1o-del-logotipo-ie-ei.jpg?ver=6" alt="logo"  className="animate__animated animate__rotateInDownLeft"/>
                     </Link>
                 </div>
 
 
-                <nav className="flex items-center">
+                <nav className="flex items-center  animate__animated animate__fadeInDown">
                     <ul className="hidden md:flex md:gap-3 text-gray-700">
                         {pages.map((page) => {
                             return (
@@ -69,7 +69,7 @@ const Navbar = () => {
 
 
 
-                        <div className={`fixed z-50 top-0 right-0 h-[550px] bg-white transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden w-64 p-4 z-50`}>
+                        <div className={`fixed top-0 right-0 h-[550px] bg-white transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden w-64 p-4 z-50`}>
                             <div className="flex justify-end">
                                 <svg onClick={toggleMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 cursor-pointer">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />

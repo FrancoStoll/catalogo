@@ -14,7 +14,7 @@ const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product)
 
     // Paginación
     const totalProducts = products.length
-    const [productsPerPage] = useState(8)
+    const [productsPerPage] = useState(12)
     const [currentPage, setCurrentPage] = useState(1)
     const [loading, setLoading] = useState<boolean>(true)
 

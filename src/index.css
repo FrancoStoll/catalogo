@@ -7,3 +7,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.hamb {
+  z-index: 100;
+  animation-fill-mode: none;
+}
