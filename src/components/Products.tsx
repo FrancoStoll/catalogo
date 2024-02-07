@@ -50,7 +50,7 @@ const Products = ({ handleModalProduct, }: { handleModalProduct: (prod: Product)
 
 
 
-
+    
 
     const filterProducts = () => {
 
